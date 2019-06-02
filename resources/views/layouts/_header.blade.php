@@ -17,7 +17,7 @@
 
 			<ul class="navbar-nav navbar-right">
 				@guest
-					<li class="nav-item"><a class="nav-link" href="#">登录</a></li>
+					<li class="nav-item"><a class="nav-link" href="{{ route('login') }}">登录</a></li>
 					<li class="nav-item"><a class="nav-link" href="{{ route('register') }}">注册</a></li>
 				@else
 					<li class="nav-item">
@@ -43,12 +43,12 @@
 							</a>
 							<div class="dropdown-divider"></div>
 							@endcan
-							<a class="dropdown-item" href="#">
+							<a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">
 								<i class="far fa-user mr-2"></i>
 							个人中心
 							</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">
+							<a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">
 								<i class="far fa-edit mr-2"></i>
 								编辑资料
 							</a>
