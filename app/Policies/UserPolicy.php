@@ -18,7 +18,12 @@ class UserPolicy
      */
     public function view(User $user, User $model)
     {
-        //
+        return $user->id === $model->id;
+    }
+
+    public function edit(User $user, User $model)
+    {
+        return $user->id === $model->id;
     }
 
     /**

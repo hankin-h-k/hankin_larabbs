@@ -15,6 +15,7 @@ class UserController extends Controller
 
     public function show(Request $request, User $user)
     {
+
     	// $topics = $user->topics()->paginate();
     	return view('users.show', compact('user'));
     }
@@ -35,6 +36,7 @@ class UserController extends Controller
 
     public function edit(User $user)
     {
+        $this->authorize('edit', $user);
     	return view('users.edit', compact('user'));
     }
 }
