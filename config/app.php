@@ -177,6 +177,7 @@ return [
 
         HieuLe\Active\ActiveServiceProvider::class,
         Mews\Captcha\CaptchaServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
@@ -229,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Active' => HieuLe\Active\Facades\Active::class,
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];
