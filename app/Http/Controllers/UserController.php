@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Handlers\ImageUploadHandler;
+use App\Http\Requests\UserRequest;
 class UserController extends Controller
 {
     public function __construct()
@@ -18,7 +19,7 @@ class UserController extends Controller
     	return view('users.show', compact('user'));
     }
 
-    public function update(Request $request, User $user, ImageUploadHandler $upload)
+    public function update(UserRequest $request, User $user, ImageUploadHandler $upload)
     {
     	$this->authorize('update', $user);
     	$data = $request->all();
