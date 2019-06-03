@@ -23,7 +23,7 @@ Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('regiter');
 Route::post('register', 'Auth\RegisterController@register');
 
-Route::resource('users', 'UserController', ['only'=>['show', 'update', 'edit']]);
+Route::resource('users', 'UsersController', ['only'=>['show', 'update', 'edit']]);
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

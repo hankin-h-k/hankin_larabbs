@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Handlers\ImageUploadHandler;
 use App\Http\Requests\UserRequest;
-class UserController extends Controller
+class UsersController extends Controller
 {
     public function __construct()
     {
